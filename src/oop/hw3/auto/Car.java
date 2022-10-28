@@ -1,4 +1,4 @@
-package auto;
+package oop.hw3.auto;
 
 import java.util.Objects;
 
@@ -26,6 +26,11 @@ public class Car extends Transport {
         this.colorBody =Objects.requireNonNullElse(colorBody, "белый") ;
         this.year =Math.max(year, 2000) ;
         this.country =Objects.requireNonNullElse(country, "default") ;
+    }
+
+    public void refill() {
+        System.out.println("можно заправлять бензином, дизелем на заправке или заряжать на специальных" +
+                " электропарковках, если это электрокар.");
     }
 
     public void options() {

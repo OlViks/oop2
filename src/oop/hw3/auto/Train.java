@@ -1,4 +1,4 @@
-package auto;
+package oop.hw3.auto;
 
 
 import java.util.Objects;
@@ -77,5 +77,9 @@ public class Train extends Transport {
                 ", endStation='" + endStation + '\'' +
                 ", numberWagons=" + numberWagons +
                 '}';
+    }
+
+    public void refill() {
+        System.out.println("нужно заправлять дизелем.");
     }
 }

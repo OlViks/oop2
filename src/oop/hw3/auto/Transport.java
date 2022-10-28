@@ -1,8 +1,8 @@
-package auto;
+package oop.hw3.auto;
 
 import java.util.Objects;
 
-public class Transport {
+public abstract class Transport {
     private String brand;
     private String model;
     private int year;
@@ -19,8 +19,10 @@ public class Transport {
         setMaxSpeed(maxSpeed);
     }
 
+    public abstract void refill();
+
     public void options() {
-        System.out.println("Марка автомобиля " + brand + " модель " + model +
+        System.out.println("Марка " + brand + " модель " + model +
                 " год выпуска " + year + " цвет " + colorBody +
                 " страна производитель " + country + ".");
     }
