@@ -9,7 +9,7 @@ public abstract class Animal {
 
     protected Animal(String name, int age) {
         this.name = Objects.requireNonNullElse(name, "default");
-        this.age = Math.max(age, 1);
+        this.age = Math.max(age, 2);
     }
 
     public String getName() {

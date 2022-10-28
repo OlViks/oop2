@@ -5,6 +5,7 @@ import java.util.Objects;
 public class Herbivore extends Mammal{
     private String typeOfFood;
 
+
     protected Herbivore(String name, int age) {
         super(name, age);
     }

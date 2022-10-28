@@ -21,6 +21,7 @@ public class Flying extends Bird{
         System.out.println("вжух-вжух-вжух");
     }
 
+
     public String getMoveMentType() {
         return moveMentType;
     }

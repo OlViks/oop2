@@ -21,6 +21,7 @@ public class Flightless extends Bird{
         System.out.println("топ топ топ топ топ");
     }
 
+
     public String getMoveMentType() {
         return moveMentType;
     }

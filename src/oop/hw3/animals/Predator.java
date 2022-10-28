@@ -5,6 +5,7 @@ import java.util.Objects;
 public class Predator extends Mammal {
     private String typeOfFood;
 
+
     protected Predator(String name, int age) {
         super(name, age);
     }

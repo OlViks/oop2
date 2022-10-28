@@ -5,6 +5,7 @@ import java.util.Objects;
 public class Amphibian extends Animal{
     private String habitat;
 
+
     protected Amphibian(String name, int age) {
         super(name, age);
     }

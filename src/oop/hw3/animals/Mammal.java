@@ -7,6 +7,7 @@ public class Mammal extends Animal{
     private String habitat;
     private int moveSpeed;
 
+
     protected Mammal(String name, int age) {
         super(name, age);
     }
