@@ -1,22 +1,15 @@
 package oop.hw3.animals;
 
-import java.util.Objects;
-
 public class Bird extends Animal {
     private String habitat;
 
-    protected Bird(String name, int age) {
+    public  Bird(String name, int age, String habitat) {
         super(name, age);
+        this.habitat = habitat;
     }
-
-
-    public Bird(String name, int age, String habitat) {
-        super(name, age);
-        this.habitat = Objects.requireNonNullElse(habitat, "default");
-    }
-
+    @Override
     public void hunt() {
-        System.out.println("кар кар кар");
+        System.out.println("атака в полете");
     }
 
     public String getHabitat() {
@@ -24,31 +17,7 @@ public class Bird extends Animal {
     }
 
     public void setHabitat(String habitat) {
-        if (habitat != null && !habitat.isEmpty() && !habitat.isBlank()) {
-            this.habitat = habitat;
-        } else {
-            this.habitat = "default";
-        }
+        this.habitat = habitat;
     }
 
-    @Override
-    public String toString() {
-        return "Bird{" +
-                "habitat='" + habitat + '\'' +
-                "} " + super.toString();
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        if (!super.equals(o)) return false;
-        Bird bird = (Bird) o;
-        return Objects.equals(habitat, bird.habitat);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(habitat);
-    }
 }
