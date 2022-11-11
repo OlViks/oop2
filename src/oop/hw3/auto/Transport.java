@@ -35,6 +35,7 @@ public abstract class Transport {
         this.model = Objects.requireNonNullElse(model, "default");
     }
 
+
     public void getYear() {
         this.year = Math.max(year, 2000);
     }

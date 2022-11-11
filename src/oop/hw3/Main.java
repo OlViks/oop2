@@ -124,5 +124,6 @@ public class Main {
         System.out.println(albatross);
         albatross.fly();
         System.out.println();
+
     }
 }
