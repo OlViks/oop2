@@ -16,6 +16,8 @@ public abstract class Transport {
 
     public abstract void stopMovement();
 
+    public abstract void printInformation();
+
     public String getBrand() {
         return brand;
     }

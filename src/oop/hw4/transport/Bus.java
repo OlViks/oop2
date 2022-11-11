@@ -2,9 +2,10 @@ package oop.hw4.transport;
 
 
 public class Bus extends Transport implements Competing{
-
-    public Bus(String brand, String model, float volumeEngine) {
+    private final PassengerCapacity passengerCapacity;
+    public Bus(String brand, String model, float volumeEngine, PassengerCapacity passengerCapacity) {
         super(brand, model, volumeEngine);
+        this.passengerCapacity = passengerCapacity;
     }
 
     @Override
@@ -15,6 +16,15 @@ public class Bus extends Transport implements Competing{
     @Override
     public void stopMovement() {
         System.out.printf("Автобус %s %s начать движение", this.getBrand(), this.getModel());
+    }
+
+    @Override
+    public void printInformation() {
+        if (this.passengerCapacity != null) {
+            System.out.println(this.passengerCapacity);
+        } else {
+            System.out.println("Укажите вместимость.");
+        }
     }
 
     @Override

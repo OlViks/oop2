@@ -2,9 +2,10 @@ package oop.hw4.transport;
 
 public class Car extends Transport implements Competing {
 
-
-    public Car(String brand, String model, float volumeEngine) {
+    private final BodyType bodyType;
+    public Car(String brand, String model, float volumeEngine,BodyType bodyType) {
         super(brand, model, volumeEngine);
+        this.bodyType = bodyType;
     }
 
     @Override
@@ -17,6 +18,16 @@ public class Car extends Transport implements Competing {
         System.out.printf("Машина %s %s закончить движение", this.getBrand(), this.getModel());
 
     }
+
+    @Override
+    public void printInformation() {
+        if (this.bodyType != null) {
+            System.out.println(this.bodyType);
+        } else {
+            System.out.println("Укажите тип кузова.");
+        }
+    }
+
 
     @Override
     public void pitStop() {
